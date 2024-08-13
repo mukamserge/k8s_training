@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine
+spec:
+  containers:
+  - name: alpine
+    image: alpine
+    env:
+    - name: DEMO_ENV
+      value: "Coucou"
+    command: ["/bin/sh", "-c"]
+    args:
+      - while true; do
+          sleep 1;
+        done
